@@ -21,7 +21,7 @@
   <a href="#mailbox_with_mail-contato">📬 Contato</a>
 </p>
 
-## :computer: Project 
+## :computer: Projeto
 <h4 align="center">
   Aplicativo que conecta pessoas que querem ajudar com ONGs, para salvar o dia!
 </h4>
@@ -129,8 +129,8 @@ Este projeto está sob a licença MIT. Consulte a [LICENÇA](https://github.com/
 
 ## :mailbox_with_mail: Contato
   <a href="https://www.linkedin.com/in/jeansflores/" target="_blank" >
-    <img alt="Linkedin - Stefano Saffran" src="https://img.shields.io/badge/Linkedin--%23F8952D?style=social&logo=linkedin">
+    <img alt="Linkedin - Jean Flores" src="https://img.shields.io/badge/Linkedin--%23F8952D?style=social&logo=linkedin">
   </a>&nbsp;&nbsp;&nbsp;
   <a href="mailto:jeansfloresof@gmail.com" target="_blank" >
-    <img alt="Email - Stefano Saffran" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
+    <img alt="Email - Jean Flores" src="https://img.shields.io/badge/Email--%23F8952D?style=social&logo=gmail">
   </a> 
