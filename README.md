@@ -11,6 +11,7 @@
   </a>
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/jeansflores/be-the-hero?color=e02041">
   <img alt="GitHub license" src="https://img.shields.io/github/license/jeansflores/be-the-hero?color=e02041">
+  <a href="https://www.codacy.com/manual/jeansflores/be-the-hero?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jeansflores/be-the-hero&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c27115f70877406fa25019d7352177af"/></a>
 </p>
 
 <p align="center">
