@@ -26,7 +26,7 @@
   Aplicativo que conecta pessoas que querem ajudar com ONGs, para salvar o dia!
 </h4>
 <p align="center">
-  <!-- <img src="" height="400"> -->
+  <img src="https://res.cloudinary.com/jeansflores/image/upload/v1585711478/be-the-hero/app_vomoqd.jpg" height="400">
 </p>
 
 ## :rocket: Tecnologias
