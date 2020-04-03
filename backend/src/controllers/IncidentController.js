@@ -19,8 +19,8 @@ module.exports = {
         'ongs.uf',
       ]);
 
-      res.header('X-Total-Count', count['count(*)']);
-    
+    res.header('X-Total-Count', count['count(*)']);
+
     return res.json(incidents);
   },
 
@@ -32,7 +32,7 @@ module.exports = {
       title,
       description,
       value,
-      ong_id
+      ong_id,
     });
 
     return res.json({ id });
@@ -42,14 +42,17 @@ module.exports = {
     const { id } = req.params;
     const ong_id = req.headers.authorization;
 
-    const incident = await connection('incidents').where('id', id).select('ong_id').first();
+    const incident = await connection('incidents')
+      .where('id', id)
+      .select('ong_id')
+      .first();
 
     if (incident.ong_id !== ong_id) {
-      return res.status(401).json({ error: "Operação não permitida" });
+      return res.status(401).json({ error: 'Operação não permitida' });
     }
 
     await connection('incidents').where('id', id).delete();
 
     return res.status(204).send();
-  }
-}
+  },
+};

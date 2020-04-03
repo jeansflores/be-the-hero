@@ -2,17 +2,23 @@ import { Feather } from '@expo/vector-icons';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import React from 'react';
 import { Image, Text, TouchableOpacity, View, Linking } from 'react-native';
+import * as MailComposer from 'expo-mail-composer';
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
-
-import * as MailComposer from 'expo-mail-composer';
 
 export default function Detail() {
   const navigation = useNavigation();
   const route = useRoute();
 
-  const { incident }= route.params;
-  const message = `Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}`;
+  const { incident } = route.params;
+  const message = `Olá ${
+    incident.name
+  }, estou entrando em contato pois gostaria de ajudar no caso "${
+    incident.title
+  }" com o valor de ${Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(incident.value)}`;
 
   function navigateToIncidents() {
     navigation.navigate('Incidents');
@@ -22,17 +28,19 @@ export default function Detail() {
     MailComposer.composeAsync({
       subject: `Herói do caso: ${incident.title}`,
       recipients: [incident.email],
-      body: message
-    })
+      body: message,
+    });
   }
 
   function sendWhatsapp() {
-    Linking.openURL(`whatsapp://send?phone=${incident.whatsapp}&text=${message}`)
+    Linking.openURL(
+      `whatsapp://send?phone=${incident.whatsapp}&text=${message}`
+    );
   }
 
   return (
     <View style={styles.container}>
-      <View style={styles.header }>
+      <View style={styles.header}>
         <Image source={logoImg} />
         <TouchableOpacity
           style={styles.detailsButton}
@@ -43,13 +51,18 @@ export default function Detail() {
       </View>
 
       <View style={styles.incident}>
-        <Text style={[styles.incidentProperty, {marginTop: 0}]}>ONG:</Text>
-        <Text style={styles.incidentValue}>{incident.name} de {incident.city}/{incident.uf}</Text>
+        <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
+        <Text style={styles.incidentValue}>
+          {incident.name} de {incident.city}/{incident.uf}
+        </Text>
         <Text style={styles.incidentProperty}>CASO:</Text>
         <Text style={styles.incidentValue}>{incident.title}</Text>
         <Text style={styles.incidentProperty}>VALOR:</Text>
         <Text style={styles.incidentValue}>
-          {Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}
+          {Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+          }).format(incident.value)}
         </Text>
       </View>
 

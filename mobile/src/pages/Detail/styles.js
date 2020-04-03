@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
 
 export default StyleSheet.create({
@@ -14,7 +14,7 @@ export default StyleSheet.create({
   },
   incident: {
     padding: 24,
-    borderRadius:8,
+    borderRadius: 8,
     backgroundColor: '#FFF',
     marginBottom: 16,
     marginTop: 48,
@@ -32,7 +32,7 @@ export default StyleSheet.create({
   },
   contactBox: {
     padding: 24,
-    borderRadius:8,
+    borderRadius: 8,
     backgroundColor: '#FFF',
     marginBottom: 16,
   },
@@ -64,5 +64,5 @@ export default StyleSheet.create({
     color: '#FFF',
     fontSize: 15,
     fontWeight: 'bold',
-  }
+  },
 });

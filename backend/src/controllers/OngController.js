@@ -4,7 +4,7 @@ const generateUniqueId = require('../utils/generateUniqueId');
 module.exports = {
   async index(req, res) {
     const ongs = await connection('ongs').select('*');
-    
+
     return res.json(ongs);
   },
 
@@ -19,9 +19,9 @@ module.exports = {
       email,
       whatsapp,
       city,
-      uf
+      uf,
     });
 
     return res.json({ id });
-  }
-}
+  },
+};
